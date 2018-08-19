@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './js'),
     filename: 'main.js',
+
   },
   module: {
     rules: [
@@ -24,5 +25,9 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx']
-  }
+  },
+  devServer: {
+    historyApiFallback: true
+  },
+  devtool: 'source-map'
 }
